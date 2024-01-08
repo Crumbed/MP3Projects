@@ -1,8 +1,7 @@
 package com.crumbed.mp3projects;
 
 import com.crumbed.mp3projects.commands.CustomCommand;
-import com.crumbed.mp3projects.crafting.ShulkerRecipe;
-import org.bukkit.ChatColor;
+import com.crumbed.mp3projects.events.BundleEvents;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
 
@@ -29,7 +28,10 @@ public final class Mp3projects extends JavaPlugin {
             }
         }
 
-        ShulkerRecipe.createRecipe(this);
+        var pm = getServer().getPluginManager();
+        pm.registerEvents(new BundleEvents(), this);
+
+        CraftingManager.initRecipes(this);
     }
 
     @Override
