@@ -1,0 +1,12 @@
+name: Mp3projects
+version: '${project.version}'
+main: com.crumbed.mp3projects.Mp3projects
+api-version: 1.20
+authors: [ Crumbed ]
+description: Mp3 projects plugin
+commands:
+  craft:
+    usage: /craft
+  echest:
+    aliases: [ ec, enderchest ]
+    usage: /ec
