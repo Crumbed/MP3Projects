@@ -29,7 +29,7 @@ public class CraftingManager {
         BUNDLE = new NamespacedKey(server, "data");
 
         shulkerShell(server);
-        //bundle(server);
+        bundle(server);
     }
 
 
@@ -39,7 +39,8 @@ public class CraftingManager {
         meta.setItems(List.of(new ItemStack(Material.BARRIER, 64)));
         ByteArrayInputStream menuData = null;
         try {
-            menuData = NbtUtils.serializeItemsArray(new net.minecraft.world.item.ItemStack[9]);
+            var items = new net.minecraft.world.item.ItemStack[9];
+            menuData = NbtUtils.serializeItemsArray(items);
         } catch (IOException e) {
             e.printStackTrace();
         }

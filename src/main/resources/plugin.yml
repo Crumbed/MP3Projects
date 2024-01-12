@@ -3,6 +3,7 @@ version: '${project.version}'
 main: com.crumbed.mp3projects.Mp3projects
 api-version: 1.20
 authors: [ Crumbed ]
+depend: [ Multiverse-Core ]
 description: Mp3 projects plugin
 commands:
   craft:
@@ -10,3 +11,6 @@ commands:
   echest:
     aliases: [ ec, enderchest ]
     usage: /ec
+  resource_world:
+    aliases: [ reworld, rworld, altworld ]
+    usage: /rworld
