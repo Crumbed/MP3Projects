@@ -29,7 +29,7 @@ public class CraftingManager {
         BUNDLE = new NamespacedKey(server, "data");
 
         shulkerShell(server);
-        bundle(server);
+        //bundle(server);
     }
 
 
